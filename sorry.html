@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorry</title>
+    <link rel="stylesheet" href="sorry.css">
+</head>
+<body>
+    <div class="container">
+        <!-- First row of buttons -->
+        <div class="button-row">
+            <button id="sorryButton">Press Me</button>
+            <button id="chillButton">Press Me Too</button>
+        </div>
+
+        <!-- Second row of buttons -->
+        <div class="button-row">
+            <button id="yesButton">Yes(maaf kiya button)</button>
+            <button id="noButton">No</button>
+        </div>
+
+        <p id="message"></p>
+    </div>
+
+    <script>
+        const sorryButton = document.getElementById('sorryButton');
+        const chillButton = document.getElementById('chillButton');
+        const yesButton = document.getElementById('yesButton');
+        const noButton = document.getElementById('noButton');
+        const message = document.getElementById('message');
+
+        // When the "Sorry" button is clicked
+        sorryButton.addEventListener('click', () => {
+            message.textContent = '🙇 Sorry!';
+            message.classList.add('show');
+        });
+
+        // When the "Chill" button is clicked
+        chillButton.addEventListener('click', () => {
+            message.textContent = '😎 Chill maar yrr Tamanna!';
+            message.classList.add('show');
+        });
+
+        // When the "Yes" button is clicked (Celebration)
+        yesButton.addEventListener('click', () => {
+            message.textContent = '🎉 yayyyyyyyyyyyyyyyyy! 🎉';
+            message.classList.add('show', 'celebrate');
+        });
+
+        // When the "No" button is clicked (Message to press Yes)
+        noButton.addEventListener('click', () => {
+            message.textContent = 'Please press the "Yes" button! tamannaaa';
+            message.classList.add('show');
+        });
+    </script>
+</body>
+</html>
